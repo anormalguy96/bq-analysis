@@ -1,0 +1,10 @@
+name: bq_ecom_profile
+version: '1.0'
+config-version: 2
+
+profile: bq_ecom_profile
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target"]

@@ -1,0 +1,10 @@
+profiles.yml
+
+
+__pycache__/
+*.pyc
+
+
+logs/
+target/
+dbt_modules/
