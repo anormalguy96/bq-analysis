@@ -9,3 +9,4 @@ logs/
 target/
 dbt_modules/.gcp/keys/*.json
 .gcp/keys/*.json
+.gcp/keys/*.json
