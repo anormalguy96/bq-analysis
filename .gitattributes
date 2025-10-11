@@ -1,5 +1,6 @@
+# Ensure consistent line endings
 * text=auto
-*.yml text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.py text eol=lf
 *.sql text eol=lf
-*.md text eol=lf
-*.json text eol=lf

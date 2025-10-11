@@ -1,0 +1,12 @@
+bq_ecom_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: elmaddin-bq-demo
+      dataset: analytics
+      keyfile: C:\\Users\\Huawei\\GitHub Repositories\\bq-analysis\\.gcp\\keys\\elmaddin-bq-demo-f4ab6f2b45c2.json
+      threads: 4
+      timeout_seconds: 300
+      location: US
