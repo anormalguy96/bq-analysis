@@ -7,4 +7,4 @@ __pycache__/
 
 logs/
 target/
-dbt_modules/
+dbt_modules/.gcp/keys/*.json
