@@ -12,4 +12,4 @@ dbt_modules/.gcp/keys/*.json
 .gcp/keys/*.json
 
 dbt/target/
-dbt/dbt_packages/
+dbt/dbt_packages/.gcp/keys/*.json
