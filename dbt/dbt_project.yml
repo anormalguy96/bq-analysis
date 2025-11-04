@@ -8,3 +8,7 @@ model-paths: ["models"]
 macro-paths: ["macros"]
 target-path: "target"
 clean-targets: ["target"]
+
+defaults:
+  run:
+    working-directory: dbt
