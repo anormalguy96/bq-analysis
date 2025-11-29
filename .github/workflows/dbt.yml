@@ -22,11 +22,18 @@ jobs:
           python -m pip install "dbt-bigquery==1.8.*"  # ensure dbt is installed
           dbt --version
 
-      - name: Run dbt
+      - name: Write GCP service account key to file
         run: |
-          cd dbt
+          mkdir -p .gcloud
+          echo "${GCP_SA_KEY}" > .gcloud/dbt-service-account.json
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Run dbt
+        working-directory: ./dbt
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/.gcloud/dbt-service-account.json
+        run: |
           dbt deps
           dbt seed --profiles-dir ..
           dbt run --profiles-dir ..
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
